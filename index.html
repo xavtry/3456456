@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWLK0PZVBM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HWLK0PZVBM', { send_page_view: false });
+    </script>
+  </head>
+
+  <body>
+
+    <!-- 🔐 PASSWORD OVERLAY -->
+    <div id="authOverlay" style="
+      position:fixed;
+      inset:0;
+      background:#020617;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:999999;
+      color:white;
+      font-family:poppins,sans-serif;
+    ">
+      <div style="
+        background:#020617;
+        padding:26px;
+        border-radius:14px;
+        width:300px;
+        text-align:center;
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 20px 50px rgba(0,0,0,0.5);
+      ">
+        <h2 style="margin-bottom:12px;">Enter Password</h2>
+
+        <input
+          type="password"
+          id="authPw"
+          placeholder="Password"
+          style="
+            width:100%;
+            padding:12px;
+            border-radius:8px;
+            border:none;
+            outline:none;
+            background:#0f172a;
+            color:white;
+          "
+        >
+
+        <button
+          onclick="authLogin()"
+          style="
+            width:100%;
+            margin-top:14px;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;
+          "
+        >
+          Continue
+        </button>
+
+        <p id="authErr" style="color:#f87171;margin-top:12px;"></p>
+      </div>
+    </div>
+
+    <!-- 🔐 PASSWORD SCRIPT -->
+    <script>
+      (function () {
+        const PASSWORD = "ChAnGeMe!@#$%^&*9"; // 🔒 CHANGE THIS
+
+        const overlay = document.getElementById("authOverlay");
+
+        if (localStorage.getItem("auth") === "true") {
+          overlay.remove();
+          return;
+        }
+
+        window.authLogin = function () {
+          const val = document.getElementById("authPw").value;
+
+          if (val === PASSWORD) {
+            localStorage.setItem("auth", "true");
+            overlay.remove();
+          } else {
+            document.getElementById("authErr").textContent = "Wrong password";
+          }
+        };
+      })();
+    </script>
+
+    <!-- React mounts here -->
+    <div id="root"></div>
+
+    <!-- App entry -->
+    <script type="module" src="/src/startup.jsx"></script>
+
+    <style>
+      body {
+        background-size: 24px 24px;
+        opacity: 1;
+      }
+    </style>
+
+  </body>
+</html>
