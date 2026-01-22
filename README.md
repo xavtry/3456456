@@ -1,25 +1,95 @@
-This version is outdated, we highly recommend using V5!
-Doge Unblocker
-Doge Unblocker is a site unblocker powered by Ultraviolet. Our service allows you to get around internet restrictions to visit your favorite sites and apps, without worrying about your browsing history being saved or your internet being blocked.
+<div align="center">
+  
+  <img src="https://github.com/DogeNetwork/dogeub/blob/main/public/logo.svg" width="322" />
+  <br />
 
-Key Features:
-View All Features
-Current Developers:
-Derpman
-fowntain
-Deployment
-Deploy on Railway  Deploy with Vercel Deploy to Koyeb
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I81MF4CH) ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
 
-Deploy locally:
 
-git clone https://github.com/DogeNetwork/v4
-cd v4
-npm install
-npm start
-Or simply run the install.sh file
+  <hr />
+  DogeUB (Doge Unblocker) version 5 is finally here!
 
-Discord
-Join us on Discord
+  
+  <br />
+  <br />
 
-Commercial Use and Licensing
-This project is released to the public under the AGPL, meaning all users and contributors must comply with its terms and make the source code of any modified or distributed versions available under the AGPL. As the copyright holders, we (DogeNetwork) reserve the right to sublicense or use the software, including modified versions, for commercial purposes under separate proprietary terms, independent of the AGPL release.
+  <img width="1278" height="628" alt="image" src="preview.png" />
+
+
+</div>
+
+## Overview
+
+DogeUB is a web proxy frontend / internet browsing hub, allowing you to surf the web anonymously while providing a full suite of apps and games, built with [React](https://github.com/facebook/react).
+
+> [!IMPORTANT]
+> Please consider starring our repository if you are forking it!
+
+### List of features:
+
+| Feature | Implemented |
+|---------|-------------|
+| Web Proxy | Yes |
+| Browser-like UI | Yes |
+| App player UI | Yes |
+| Cloak features | Partially |
+| Game Downloader | Yes |
+| Quick Links | Yes |
+| DuckDuckGo Search API | Yes |
+| Apps & Games | Yes |
+| Search Engine Switcher | Yes |
+| Themes/Site Customization | Yes |
+
+---
+
+### Development & Building
+
+#### Production:
+```bash
+git clone https://github.com/DogeNetwork/dogeub.git
+cd dogeub
+npm i
+npm run build
+node server.js
+```
+
+#### Development:
+
+```bash
+git clone https://github.com/DogeNetwork/dogeub.git
+cd dogeub
+npm i
+npm run dev
+```
+
+---
+
+
+### Contributors / Developers
+
+| Name          | Role               | GitHub |
+| ------------- | ------------------ | ------ |
+| Derpman | Lead Developer     |      [@qerionx](https://github.com/qerionx) |
+| Fowntain | Project Manager | [@fowntain](https://github.com/fowntain)     |
+| Akane | Contributor | [@genericness](https://github.com/genericness)     |
+| DJshelfmushroom | Contributor | [@DJshelfmushroom](https://github.com/DJshelfmushroom)     |
+
+
+> [!NOTE]
+> Want to be on this list? Make a few pull requests!
+
+---
+
+### Made possible thanks to:
+
+* [MercuryWorkshop/wisp-server-node](https://github.com/MercuryWorkshop/wisp-server-node)
+* [MercuryWorkshop/scramjet](https://github.com/MercuryWorkshop/scramjet)
+* [titaniumnetwork-dev/Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
+* [lucide-icons/lucide](https://github.com/lucide-icons/lucide)
+* [pmndrs/zustand](https://github.com/pmndrs/zustand)
+* [Stuk/jszip](https://github.com/Stuk/jszip)
+
+## License
+
+This project is licensed under the **GNU Affero GPL v3**.  
+See the [LICENSE](LICENSE) file for more details.
